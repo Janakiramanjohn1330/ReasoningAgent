@@ -1,27 +1,52 @@
-🎯 Objective
+## 🧠 Multi-Step Reasoning Agent with Self-Checking ##
+📌 Overview
 
-To build a multi-step reasoning agent that can solve structured word problems by planning, executing, and verifying solutions internally, while presenting only the final validated answer and a short explanation to the user.
+A Python-based reasoning agent that solves structured math, logic, and constraint problems using multi-step reasoning, self-verification, and retry mechanisms, while exposing only the final validated answer to the user.
 
-🛠️ Technologies Used
+**🎯 Objective**
+
+Solve problems using step-by-step internal reasoning
+
+Validate answers before returning results
+
+Retry automatically on incorrect reasoning
+
+Return clean, structured JSON output
+
+Hide raw chain-of-thought reasoning
+
+**🏗️ Architecture**
+
+Planner – Creates a step-by-step solution plan
+
+Executor – Performs reasoning and calculations
+
+Verifier – Validates results and triggers retries if needed
+
+📤 Output
+
+Final answer and status (success / failed)
+
+Short user-facing explanation
+
+Debug metadata (plan, checks, retries)
+
+ **🧠 Approach**
+
+Plan → Execute → Verify reasoning loop
+
+Deterministic calculations using Python
+
+LLM used for logical reasoning
+
+Validation before final output
+
+**🛠️ Technologies Used**
 
 Python
 
-Jupyter Notebook
+LLM APIs (OpenAI / Anthropic / Gemini or mock)
 
-LLM APIs (OpenAI / compatible LLMs or mocked interfaces)
+JSON-based structured responses
 
-JSON-based structured outputs
-
-Prompt Engineering
-
-🧠 Approach
-
-Planner Phase: Analyze the input question and generate a clear step-by-step plan for solving it.
-
-Executor Phase: Follow the plan to compute intermediate results using LLM reasoning and/or Python-based calculations.
-
-Verifier Phase: Independently validate the solution by re-checking calculations, constraints, and logical consistency.
-
-If verification fails, retry the reasoning process a limited number of times or return a failure status.
-
-Return a structured JSON response containing the final answer, reasoning summary, verification checks, and metadata—without exposing raw chain-of-thought.
+Modular prompt design
