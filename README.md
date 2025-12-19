@@ -5,48 +5,48 @@ A Python-based reasoning agent that solves structured math, logic, and constrain
 
 **🎯 Objective**
 
-Solve problems using step-by-step internal reasoning
+* Solve problems using step-by-step internal reasoning
 
-Validate answers before returning results
+* Validate answers before returning results
 
-Retry automatically on incorrect reasoning
+* Retry automatically on incorrect reasoning
 
-Return clean, structured JSON output
+* Return clean, structured JSON output
 
-Hide raw chain-of-thought reasoning
+* Hide raw chain-of-thought reasoning
 
 **🏗️ Architecture**
 
-Planner – Creates a step-by-step solution plan
+* Planner – Creates a step-by-step solution plan
 
-Executor – Performs reasoning and calculations
+* Executor – Performs reasoning and calculations
 
-Verifier – Validates results and triggers retries if needed
+* Verifier – Validates results and triggers retries if needed
 
-📤 Output
+**📤 Output**
 
-Final answer and status (success / failed)
+* Final answer and status (success / failed)
 
-Short user-facing explanation
+* Short user-facing explanation
 
-Debug metadata (plan, checks, retries)
+* Debug metadata (plan, checks, retries)
 
  **🧠 Approach**
 
-Plan → Execute → Verify reasoning loop
+* Plan → Execute → Verify reasoning loop
 
-Deterministic calculations using Python
+* Deterministic calculations using Python
 
-LLM used for logical reasoning
+* LLM used for logical reasoning
 
-Validation before final output
+* Validation before final output
 
 **🛠️ Technologies Used**
 
-Python
+* Python
 
-LLM APIs (OpenAI / Anthropic / Gemini or mock)
+* LLM APIs (OpenAI / Anthropic / Gemini or mock)
 
-JSON-based structured responses
+* JSON-based structured responses
 
-Modular prompt design
+* Modular prompt design
